@@ -1,0 +1,56 @@
+<idea-plugin>
+  <id>com.treenear.treeshape</id>
+  <name>Tree Shape Component</name>
+  <version>1.1</version>
+  <vendor email="indotreenear@gmail.com" url="http://www.treenear.com">Treenear</vendor>
+
+  <description><![CDATA[
+      Create Shape XML For Component<br>
+      <em>How To Use??Simple Just Choose In Directory res click Right new->Tree Shape
+      <br>
+      1.Circle
+      <br>
+      2.Rectangle
+      <br>
+      3.Elipze
+      <br>
+      4.Triangle
+      </em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+     You Can Custom Shape In XML res->drawable select your shape<br>
+      <em></em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action
+            id="com.MainMenu"
+            class="treeshape.MainMenu"
+            text="Tree Shape"
+            description="Tree Shape"
+            icon="/image/shp.png"
+            popup="true">
+      <add-to-group
+              group-id="NewXml"
+              anchor="before"
+              relative-to-action="AssociateWithFileType"/>
+    </action>
+  </actions>
+
+</idea-plugin>
